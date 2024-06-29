@@ -16,7 +16,7 @@ body {
 
 }
 
-.topnav a: hover {
+.topnav a:hover {
     background-color: #ddd;
     color: black;
 }
