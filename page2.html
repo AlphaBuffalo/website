@@ -16,6 +16,7 @@
 
 <form>
   <button id="btn" type="button" onclick="myfunc()">Example</button>
+  <button id="reset" onclick="take_back()">Reset</button>
   <p id="demo">This text should change</p>
 </form>
 
@@ -24,9 +25,20 @@
     
 <script>
   function myfunc(){
-  document.getElementById("demo").innerHTML = "changed text"
-  document.getElementById("btn").innerHTML = "reset (WIP)"
+    if (document.getElementById('demo').innerHTML === "This text should change"){
+      document.getElementById("demo").innerHTML = "changed text"
+      document.getElementById("btn").innerHTML = "IT CHANGED :O"
+    }else {
+      take_back()
+    }
   }
+  
+
+  function take_back(){
+    document.getElementById('demo').innerHTML = "This text should change"
+    document.getElementById('btn').innerHTML = 'Example'
+  }
+
 </script>
 
 </body>
